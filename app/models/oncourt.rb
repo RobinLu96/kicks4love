@@ -1,0 +1,5 @@
+class oncourt < ApplicationRecord
+
+
+
+end

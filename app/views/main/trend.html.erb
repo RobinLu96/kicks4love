@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Kicks4Love-oncourt</title>
+<!-- Bootstrap Core CSS -->
+<%= stylesheet_link_tag "bootstrap.min.css" %>
+<%= stylesheet_link_tag "landing-page.css" %>
+<%= stylesheet_link_tag "common.css" %>
+<%= stylesheet_link_tag "trend.css" %>
+<%= stylesheet_link_tag "font-awesome.min.css" %>
+<!-- Custom Fonts -->
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/trend.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="height: 70px;">
+      <div class="container topnav">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <!--<a class="navbar-brand topnav" href="#">Start Bootstrap</a>-->
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse clearfix" id="bs-example-navbar-collapse-1" style="position: absolute; margin-left:0; transform: translateY(-45%)">
+  						<%= link_to image_tag("logo.png", alt: "logo"),{:controller => 'main', :action => 'index'}, :style => "float:left"%>
+							<ul class="nav navbar-nav navbar-right">
+	                <li class="first">
+	                    <%= link_to "HOME", {:controller => 'main', :action => 'index'} %>
+	                </li>
+	                <li>
+	                    <%= link_to "FEATURES", {:controller => 'main', :action => 'features'} %>
+	                </li>
+	                <li>
+	                    <%= link_to "TREND", {:controller => 'main', :action => 'trend'} %>
+	                </li>
+	                <li class="last">
+	                  <%= link_to "UPCOMING", {:controller => 'main', :action => 'features'} %>
+	                </li>
+	                <li>
+	                  <%= link_to "ON-COURT", {:controller => 'main', :action => 'oncourt'} %>
+	                </li>
+	                <li>
+	                  <%= link_to "STREET-SNAP", {:controller => 'main', :action => 'features'} %>
+
+	                </li>
+	                <li class="last">
+	                    <%= link_to "RUMORS", {:controller => 'main', :action => 'features'} %>
+	                </li>
+	            </ul>
+	        </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <a name="home"></a>
+    <div class="header">
+    </div>
+
+    <div class="main clearfix">
+    	<div class="trend">
+        	Trend<br />　For<br />　　Life
+        </div>
+        <div class="photo">
+        	<ul>
+            	<li>
+                	<a href="#">
+                        <%=image_tag("Curry1.jpg", :style => "width:100%") %>
+                        <span>aaaaaaaaa</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+										<%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                    	<span>aaaaaaaaaa</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                		<%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                        <span></span>
+                    </a>
+                </li>
+                <li class="wait_load">
+                	<a href="#">
+										<%=image_tag("news2.jpg", :style => "width:100%") %>
+                        <span></span>
+                    </a>
+                </li>
+                <li class="wait_load">
+                	<a href="#">
+                        <%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                        <span>aaaaaaaaa</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="photo">
+        	<ul>
+                <li>
+                	<a href="#">
+                		<%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                	<%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                        <%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                        <span>aaaaaaaaa</span>
+                    </a>
+                </li>
+                <li class="wait_load">
+                	<a href="#">
+                		<%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                        <span></span>
+                    </a>
+                </li>
+                <li class="wait_load">
+                	<a href="#">
+                		<%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                        <span></span>
+                    </a>
+                </li>
+                <li class="wait_load">
+                	<a href="#">
+                        <%=image_tag("small-news2.jpg", :style => "width:100%") %>
+                        <span>aaaaaaaaa</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+		<footer>
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-12">
+									<ul class="list-inline">
+											<li>
+							<%= link_to "Home", {:controller => 'main', :action => 'index'} %>
+											</li>
+											<li class="footer-menu-divider">&sdot;</li>
+											<li>
+							<%= link_to "Features", {:controller => 'main', :action => 'features'} %>
+											</li>
+											<li class="footer-menu-divider">&sdot;</li>
+					<li>
+								<%= link_to "Trend", {:controller => 'main', :action => 'trend'} %>
+											</li>
+											<li class="footer-menu-divider">&sdot;</li>
+											 <li>
+												<%= link_to "Upcoming", {:controller => 'main', :action => 'features'} %>
+											</li>
+											<li class="footer-menu-divider">&sdot;</li>
+											<li>
+													<%= link_to "On-court", {:controller => 'main', :action => 'oncourt'} %>
+											</li>
+											<li class="footer-menu-divider">&sdot;</li>
+											<li>
+													<%= link_to "Street-Snap", {:controller => 'main', :action => 'features'} %>
+											</li>
+											<li class="footer-menu-divider">&sdot;</li>
+											<li>s
+											<%= link_to "Rumors", {:controller => 'main', :action => 'features'} %>
+									</li>
+									<li class="footer-menu-divider">&sdot;</li>
+									<li>
+											<a href="aboutus.html">About Us</a>
+									</li>
+									<li class="footer-menu-divider">&sdot;</li>
+									<li>
+											<a href="contact.html">Contact us</a>
+									</li>
+
+							</ul>
+										<p class="copyright text-muted small">Copyright &copy; Kicks4love 2015. All Rights Reserved</p>
+								</div>
+						</div>
+				</div>
+	</footer>
+</body>
+</html>
