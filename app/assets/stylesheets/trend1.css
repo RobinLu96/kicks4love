@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: rgb(248,248,248);
+}
+
+.header{
+	padding-top:80px
+}
+.main{
+	width:90%;
+	margin:10px auto;
+}
+.trend{
+	background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, rgb(27,188,178), rgb(55,185,233)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right,rgb(27,188,178), rgb(55,185,233)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right,rgb(27,188,178), rgb(55,185,233)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right,rgb(27,188,178), rgb(55,185,233)); /* Standard syntax (must be last) */
+    opacity: 0.5;
+	width:22%;
+	padding:40px 0;
+	margin-right:5%;
+	font-size:60px;
+	color:#FFFFFF;
+	float:left;
+	position:fixed;
+}
+
+.trend:hover{
+
+background: white;
+ background: -webkit-linear-gradient(rgb(27,188,178), rgb(55,185,233));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.trend-font{
+	margin-left: 20px;
+}
+
+
+
+.photo{
+	width:35%;
+	margin-top:2%;
+	padding:2%;
+	float:right;
+	
+}
+.photo ul{
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.photo ul li{
+	width:100%;
+	margin-bottom:50px;
+	position:relative;
+}
+.photo ul li a{
+	text-decoration: none !important;
+}
+.photo ul li img{
+	width:100%;
+}
+.photo ul li span{
+	position:absolute;
+	bottom:10%;
+	left:10%;
+	font-size:24px;
+}
+
+
+.photo-card{
+	width: 400px;
+	border-radius: 6px;
+	background-color: white;
+	
+}
+
+.card-title{
+	color: black;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+
+.card-content{
+	color: black;
+	text-align: center;
+	font-size: 15px;
+}
+
+@media only screen and (max-width:1024px) {
+	.trend{
+		width:15%;
+		font-size:36px;
+		padding:60px 0;
+	}
+	.photo{
+		width:40%;
+		margin-top:2%;
+		padding:2%;
+		float:right;
+	}
+}
+
+@media only screen and (max-width:767px) {
+	.header{
+		padding-top:100px
+	}
+	.trend{
+		width:80%;
+		font-size:30px;
+		padding:20px 0;
+		float:none;
+		position:static;
+	}
+	.photo{
+		width:50%;
+	}
+}

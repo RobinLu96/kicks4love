@@ -1,0 +1,163 @@
+<% content_for :head do %>
+    <%= stylesheet_link_tag "main.css" %>
+<% end %>
+
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="height: 70px;">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand topnav" href="#">Start Bootstrap</a>-->
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse clearfix" id="bs-example-navbar-collapse-1" style="position: absolute; margin-left:0; transform: translateY(-45%)">
+          <%= link_to image_tag("logo.png", alt: "logo"),{:controller => 'main', :action => 'index'}, :style => "float:left"%>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="first">
+                    <%= link_to "HOME", {:controller => 'main', :action => 'index'} %>
+                </li>
+                <li>
+                    <%= link_to "FEATURES", {:controller => 'main', :action => 'features'} %>
+                </li>
+                <li>
+                    <%= link_to "TREND", {:controller => 'main', :action => 'trend'} %>
+                </li>
+                <li class="last">
+                  <%= link_to "UPCOMING", {:controller => 'main', :action => 'features'} %>
+                </li>
+                <li>
+                  <%= link_to "ON-COURT", {:controller => 'main', :action => 'oncourt'} %>
+                </li>
+                <li>
+                  <%= link_to "STREET-SNAP", {:controller => 'main', :action => 'features'} %>
+                  
+                </li>
+                <li class="last">
+                    <%= link_to "RUMORS", {:controller => 'main', :action => 'features'} %>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <a name="home"></a>
+    <div class="header">
+    </div>
+
+    <div class="slide-bar-container">
+    	<ul class="clearfix">
+            <li><%=image_tag("news1.jpg") %>1</li>
+            <li><%=image_tag("news2.jpg") %>2</li>
+            <li><%=image_tag("news3.jpg") %>3</li>
+            <li><%=image_tag("news4.jpg") %>4</li>
+            <li><%=image_tag("news5.jpg") %>5</li>
+            <div class="slide-filter"></div>
+            <a href="#"><p>BANNED IS BACK<br>2016！禁穿回归</p></a>
+            <a href="#"><p>FARRARI'S ATTACK<br>法拉利来袭 -15代黑红复刻！</p></a>
+            <a href="#"><p>NEW 350! BETTER OR WORSE?</p></a>
+            <a href="#"><p>This is the fourth pic</p></a>
+            <a href="#"><p>This is the fifth pic</p></a>
+        </ul>
+        <ol class="clearfix">
+			<li>●</li>
+            <li>●</li>
+            <li>●</li>
+            <li>●</li>
+            <li>●</li>
+        </ol>
+    </div>
+
+    <div class="main">
+    	<div class="banner-box clearfix">
+            <div class="new-box" style="margin-right:5%;">
+              <%=image_tag("small-news1.jpg", :style => "width:100%") %>
+            </div>
+            <div class="new-box" style="margin-right:5%;">
+            	<%=image_tag("small-news1.jpg", :style => "width:100%") %>
+            </div>
+            <div class="new-box">
+            	<%=image_tag("small-news1.jpg", :style => "width:100%") %>
+            </div>
+        </div>
+        <% @post.each_with_index do |post, index| %>
+        	<div class="kicks-box<%= ' wait_load' if index > 2 %> clearfix">
+            	<div class="kicks-pic">
+                	<%= image_tag "post/#{post.image}" %>
+                    <div class="kicks-filter">
+                    </div>
+                    <a href="#"><p>Placeholder</p></a>
+                	<div class="kicks-title">
+                    </div>
+                </div>
+                <div class="kicks-intro">
+                	<h2><%= post.title %></h2>
+                    <div class="kicks-intro-content">
+                    	<span><%= post.content %></span>
+                    </div>
+                </div>
+            </div>
+            <% if index == 3 %>
+                <div class="to-view-more">
+                    <span>Click To View More</span>
+                </div>
+            <% end %>
+        <% end %>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+    						<%= link_to "Home", {:controller => 'main', :action => 'index'} %>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+    						<%= link_to "Features", {:controller => 'main', :action => 'features'} %>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+ 						<li>
+   							 	<%= link_to "Trend", {:controller => 'main', :action => 'trend'} %>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                         <li>
+                          <%= link_to "Upcoming", {:controller => 'main', :action => 'features'} %>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <%= link_to "On-court", {:controller => 'main', :action => 'oncourt'} %>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <%= link_to "Street-Snap", {:controller => 'main', :action => 'features'} %>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>s
+                        <%= link_to "Rumors", {:controller => 'main', :action => 'features'} %>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="contact.html">Contact us</a>
+                    </li>
+
+                </ul>
+                <p class="copyright text-muted small">Copyright &copy; Kicks4love 2015. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<% content_for :end_of_body do %>
+    <%= javascript_include_tag "main.js" %>
+<% end %>
