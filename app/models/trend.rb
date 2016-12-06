@@ -1,0 +1,5 @@
+class trend < ApplicationRecord
+
+
+
+end

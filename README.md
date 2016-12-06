@@ -39,4 +39,11 @@ $ bundle install --binstubs                         # re-setup bundle
 $ bundle config --delete bin                        # Re-configure
 $ rake rails:update:bin                             # version control
 $ git add bin
-```
+
+- [remember to start your mysql server everytime it runs]
+command for starting service:
+$ sudo service mysql start
+
+- [generating database table using bash command line](http://edgeguides.rubyonrails.org/active_record_migrations.html)
+ $ bin/rails generate migration CreateEntity (*note: have to use camel notation)
+ this will generate a file in db/migration file, which you can use to define table in database

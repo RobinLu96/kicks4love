@@ -12,3 +12,10 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( bootstrap.min.css landing-page.css main.css)
 Rails.application.config.assets.precompile += %w( jquery-1.8.3.js main.js )
+Rails.application.config.assets.precompile += %w( common.css )
+Rails.application.config.assets.precompile += %w( feature.css )
+Rails.application.config.assets.precompile += %w( index.css )
+Rails.application.config.assets.precompile += %w( font-awesome.min.css )
+Rails.application.config.assets.precompile += %w( article.js feature.js)
+Rails.application.config.assets.precompile += %w( trend.css)
+Rails.application.config.assets.precompile += %w( feature.js)

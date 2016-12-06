@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  	
+
   	root :to => "main#index"
 
   	resources :main
@@ -9,5 +9,13 @@ Rails.application.routes.draw do
   	namespace :admin do
   		resources :posts
   	end
+
+    get '/features' => "main#features"
+
+    get '/oncourt' => "main#oncourt"
+
+    get '/release' => "main#release"
+
+    get '/trend' => "main#trend"
 
 end
