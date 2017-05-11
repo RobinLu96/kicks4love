@@ -9,6 +9,20 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+
+  config.action_mailer.default_url_options = { host:  'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address           =>     'smtp.zoho.com',  
+      :port              =>      465,  
+      :user_name         =>     'jackiesun@kicks4love.com',  
+      :domain            =>     'kicks4love.com',  
+      :password          =>     '',   
+      :authentication    =>     :plain,  
+      :ssl               =>     true,  
+      :tls               =>     true  
+  }
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
