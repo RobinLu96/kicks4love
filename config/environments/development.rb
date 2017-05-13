@@ -10,7 +10,31 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports.
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local = false
+
+
+  config.action_mailer.delivery_method = :smtp
+
+  Rails.application.config.middleware.use ExceptionNotification::Rack,
+  :email => {
+      :deliver_with => :deliver, # Rails >= 4.2.1 do not need this option since it defaults to :deliver_now
+      :email_prefix => "[jackiesun] ",
+      :sender_address => %{"notifier" <jackiesun@kicks4love.com>},
+      :exception_recipients => %w{jackiesun@kicks4love.com},
+      :verbose_subject => true,
+      :include_controller_and_action_names_in_subject => true,
+      :delivery_method => :smtp,
+      :smtp_settings => {
+      :address           =>     'smtp.zoho.com',  
+      :port              =>      465,  
+      :user_name         =>     'jackiesun@kicks4love.com',  
+      :domain            =>     'kicks4love.com',  
+      :password          =>     'mappleleaf12',   
+      :authentication    =>     :plain,  
+      :ssl               =>     true,  
+      :tls               =>     true 
+    }
+  }
 
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
